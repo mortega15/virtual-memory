@@ -45,18 +45,17 @@ void getpage_offset(unsigned x) {
 }
 
 int tlb_contains(unsigned x) {  // TODO:
-
+   
 
   return -1;
 }
 
-void update_tlb(unsigned page) {  // TODO:
-
-
+void update_tlb(unsigned page) {
+    page_table[page] = true;
 }
 
-unsigned getframe(FILE* fstore, unsigned logic_add, unsigned page,
-         int *page_fault_count, int *tlb_hit_count) {              // TODO
+unsigned getframe(FILE* fstore, unsigned logic_add, unsigned page, int *page_fault_count, int *tlb_hit_count) 
+{              // TODO
   // tlb hit
 
   
@@ -77,14 +76,14 @@ unsigned getframe(FILE* fstore, unsigned logic_add, unsigned page,
 
 int get_available_frame(unsigned page) {    // TODO
   // empty queue
-
+    page_queue[page] == NULL;
+    page_queue[page] == NULL;
   
   // queue not full
-
-  
+    page_queue[page] > 128;
   
   // queue full
-
+    page_queue[page] == 128;
 
 
   return -1;   // failed to find a value
